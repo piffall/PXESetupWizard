@@ -1,3 +1,5 @@
 /pxelinux
 /pxelinux.0
 /boot/*
+/conf/*
+!/conf/src
