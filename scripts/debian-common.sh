@@ -10,7 +10,7 @@ export TRG_PKG=$TRG_NME".tar.gz"
 . ./download.sh
 
 tar vxzf $TMP/$TRG_PKG -C $TMP/
-TRG_PATH=$TFTP_PATH/boot/debian-installer/$REL/$ARCH
+TRG_PATH=$TFTP_PATH/boot/debian-$REL/debian-installer/$ARCH
 [ ! -d $TRG_PATH ] && mkdir $TRG_PATH -p
 rsync -avP $TMP/debian-installer/$ARCH/ $TRG_PATH --delete-after
 . ./clean.sh
