@@ -1,4 +1,4 @@
-DEFAULT vesamenu.c32
+DEFAULT syslinux/vesamenu.c32
 MENU TITLE BTB PXE
 MENU COLOR TITLE 1;36;44 #FFFFFFFF #00000000 STD
 MENU COLOR BORDER 30;44 #40000000 #00000000 STD
@@ -11,6 +11,8 @@ TEXT HELP
 Boot from the local hard drive.
 If you are unsure, select this option.
 ENDTEXT
+
+INCLUDE conf/debian.conf
 
 PROMPT 0
 TIMEOUT 300
