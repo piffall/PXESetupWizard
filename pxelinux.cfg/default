@@ -13,6 +13,10 @@ If you are unsure, select this option.
 ENDTEXT
 
 INCLUDE conf/debian.conf
+INCLUDE conf/ubuntu.conf
+
+MENU SEPARATOR
+INCLUDE conf/memtest.conf
 
 PROMPT 0
 TIMEOUT 300
