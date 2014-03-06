@@ -1,0 +1,16 @@
+DEFAULT vesamenu.c32
+MENU TITLE BTB PXE
+MENU COLOR TITLE 1;36;44 #FFFFFFFF #00000000 STD
+MENU COLOR BORDER 30;44 #40000000 #00000000 STD
+
+LABEL
+localboot 0
+MENU DEFAULT
+MENU LABEL Boot from hard disk
+TEXT HELP
+Boot from the local hard drive.
+If you are unsure, select this option.
+ENDTEXT
+
+PROMPT 0
+TIMEOUT 300
