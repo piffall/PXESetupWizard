@@ -14,6 +14,7 @@ ENDTEXT
 
 INCLUDE conf/debian.conf
 INCLUDE conf/ubuntu.conf
+INCLUDE conf/gparted.conf
 
 MENU SEPARATOR
 INCLUDE conf/memtest.conf
