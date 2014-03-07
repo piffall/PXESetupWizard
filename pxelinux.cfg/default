@@ -12,12 +12,12 @@ Boot from the local hard drive.
 If you are unsure, select this option.
 ENDTEXT
 
-INCLUDE conf/debian.conf
-INCLUDE conf/ubuntu.conf
-INCLUDE conf/gparted.conf
+INCLUDE conf/enabled/debian.conf
+INCLUDE conf/enabled/ubuntu.conf
+INCLUDE conf/enabled/gparted.conf
 
 MENU SEPARATOR
-INCLUDE conf/memtest.conf
+INCLUDE conf/enabled/memtest.conf
 
 PROMPT 0
 TIMEOUT 300
