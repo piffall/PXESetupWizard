@@ -18,6 +18,7 @@ INCLUDE conf/enabled/system-rescue-cd.conf
 
 INCLUDE conf/enabled/gparted.conf
 INCLUDE conf/enabled/super-grub-disk.conf
+INCLUDE conf/enabled/rescatux.conf
 
 MENU SEPARATOR
 INCLUDE conf/enabled/memtest.conf
