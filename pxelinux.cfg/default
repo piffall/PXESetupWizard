@@ -24,6 +24,7 @@ MENU SEPARATOR
 INCLUDE conf/enabled/super-grub-disk.conf
 
 MENU SEPARATOR
+INCLUDE conf/enabled/charmeleon.conf
 INCLUDE conf/enabled/memtest.conf
 
 PROMPT 0
