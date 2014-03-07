@@ -16,13 +16,13 @@
          good_msg "Downloading ${urldatafile} ..."
  
 -        cmd="/bin/busybox tftp -g -r ${urlchecksum} -l ${BOOTPATH}/${filecksm} ${tftpip}"
-+        cmd="/bin/busybox tftp -g -r ${urlchecksum} -l ${BOOTPATH}/${filecksm} ${tftpip} -b 4096"
++        cmd="/bin/busybox tftp -g -r ${urlchecksum} -l ${BOOTPATH}/${filecksm} ${tftpip} -b 10240"
          echo "${cmd}"
          ${cmd}
          res1=$?
  
 -        cmd="/bin/busybox tftp -g -r ${urldatafile} -l ${BOOTPATH}/${filename} ${tftpip}"
-+        cmd="/bin/busybox tftp -g -r ${urldatafile} -l ${BOOTPATH}/${filename} ${tftpip} -b 4096"
++        cmd="/bin/busybox tftp -g -r ${urldatafile} -l ${BOOTPATH}/${filename} ${tftpip} -b 10240"
          echo "${cmd}"
          ${cmd}
          res2=$?
