@@ -2,8 +2,8 @@
 
 # Changing to working directory
 cd $(dirname "$0")
-. ./config.sh
+. ../config.sh
 
 export REL="unstable"
-export ARCH="i386"
-. ./debian-common.sh
+export ARCH="amd64"
+. ./debian/debian-common.sh

@@ -14,7 +14,10 @@ ENDTEXT
 
 INCLUDE conf/enabled/debian.conf
 INCLUDE conf/enabled/ubuntu.conf
+INCLUDE conf/enabled/system-rescue-cd.conf
+
 INCLUDE conf/enabled/gparted.conf
+INCLUDE conf/enabled/super-grub-disk.conf
 
 MENU SEPARATOR
 INCLUDE conf/enabled/memtest.conf

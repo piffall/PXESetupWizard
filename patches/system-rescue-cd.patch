@@ -1,0 +1,28 @@
+--- a/init	2014-03-07 11:09:37.543047746 +0100
++++ b/init	2014-03-07 11:25:42.730050046 +0100
+@@ -689,8 +689,8 @@
+     fi
+ 
+     url="$(echo ${TFTPBOOT} | sed 's!tftp://!!g')"
+-    tftpip="${url%%/*}"
+-    tftpurl=$(busybox dirname ${url} | sed -e 's![^/]*/!!')
++    tftpip="${url%%:*}"
++    tftpurl=$( echo ${url} | sed -e 's![^:]*:!!')
+ 
+     # in any case sysrcd.dat is required
+     FILENAMES="${LOOPDAT}"
+@@ -715,12 +715,12 @@
+         urlchecksum="${tftpurl}/${filecksm}"
+         good_msg "Downloading ${urldatafile} ..."
+ 
+-        cmd="/bin/busybox tftp -g -r ${urlchecksum} -l ${BOOTPATH}/${filecksm} ${tftpip}"
++        cmd="/bin/busybox tftp -g -r ${urlchecksum} -l ${BOOTPATH}/${filecksm} ${tftpip} -b 4096"
+         echo "${cmd}"
+         ${cmd}
+         res1=$?
+ 
+-        cmd="/bin/busybox tftp -g -r ${urldatafile} -l ${BOOTPATH}/${filename} ${tftpip}"
++        cmd="/bin/busybox tftp -g -r ${urldatafile} -l ${BOOTPATH}/${filename} ${tftpip} -b 4096"
+         echo "${cmd}"
+         ${cmd}
+         res2=$?

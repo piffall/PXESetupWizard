@@ -2,8 +2,8 @@
 
 # Changing to working directory
 cd $(dirname "$0")
-. ./config.sh
+. ../config.sh
 
-export REL="stable"
+export REL="saucy"
 export ARCH="amd64"
-. ./debian-common.sh
+. ./ubuntu/ubuntu-common.sh

@@ -2,7 +2,7 @@
 
 # Changing to working directory
 cd $(dirname "$0")
-. ./config.sh
+. ../config.sh
 
 # Version of memtest
 MT_VER="memtest86+-5.01"
@@ -13,9 +13,9 @@ export TRG_NME=$MT_VER
 export TRG_PKG=$TRG_NME".bin.gz"
 
 # Create tmp path
-. ./download.sh
+. ./common/download.sh
 gunzip $TMP/$TRG_PKG
 [ ! -d $TFTP_PATH/boot/memtest ] && mkdir $TFTP_PATH/boot/memtest
 mv $TMP/$TRG_NME".bin" $TFTP_PATH/boot/memtest/memtest
 
-. ./clean.sh
+. ./common/clean.sh
