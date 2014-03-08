@@ -9,7 +9,6 @@
 - Configured DHCP Server
 
 ## Installation
-- Go to /srv/tftp/
 - Clone this repository, I recomend you clone into your home path.
 ```
 git clone https://github.com/piffall/pxe-sw /path/to/pxe-sw
