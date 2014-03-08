@@ -9,14 +9,18 @@ _NetBoot installers and Live OSs over TFTP_
 - Configured DHCP Server
 
 ## Installation
-1. Go to /srv/tftp/
+- Go to /srv/tftp/
+- Clone this repository, I recomend you clone into your home path.
 ```
-~$ cd /srv/tftp
+git clone https://github.com/piffall/pxe-sw /path/to/pxe-sw
 ```
-
-2. Run script and answer the questions
+- Run script and answer the questions
 ```
-~$ ./setup.sh
+./setup.sh
+```
+- Create a symlink
+```
+ln -s /path/to/pxe/ /srv/tftp
 ```
 
 ## OS and Tools
