@@ -10,13 +10,14 @@ _NetBoot installers and Live OSs over TFTP_
 
 ## Installation
 1. Go to /srv/tftp/
-
-	~$ cd /srv/tftp
+```
+~$ cd /srv/tftp
+```
 
 2. Run script and answer the questions
-
-	~$ ./setup.sh
-	
+```
+~$ ./setup.sh
+```
 
 ## OS and Tools
 
