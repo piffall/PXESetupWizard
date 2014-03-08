@@ -1,5 +1,5 @@
 # PXE SW
-_NetBoot installers and Live OSs over TFTP_
+*NetBoot installers and Live OSs over TFTP*
 
 ## Requirements
 - Debian based OS (Debian,Ubuntu,Mint,...)
@@ -25,36 +25,37 @@ ln -s /path/to/pxe/ /srv/tftp
 
 ## OS and Tools
 
-### Debian
+### [Debian](http://www.debian.org)
 - Debian Stable (i386,amd64)
 - Debian Unstable (i386,amd64)
 
-### Ubuntu
+### [Ubuntu](http://www.ubuntu.com)
 - Ubuntu Saucy (i386,amd64)
 
 ### Recovery
-- System Rescue CD
-- Rescatux
-- Super Grub Disk
+- [System Rescue CD](http://www.sysresccd.org)
+- [Rescatux](http://www.supergrubdisk.org/rescatux/)
+- [Super Grub Disk](http://www.supergrubdisk.org/super-grub2-disk/)
 
-### Other (GNU/Linux) Based OS
-- OpenWRT (Live only)
+### Other GNU/Linux Based OS
+- [OpenWRT](https://openwrt.org/)
+- [GParted](https://gparted.org/)
 
-### Diagnostic
-- HDT (Hardware Diagnostic Tool)
-- AIDA (Old Hardware Diagnostic Tool)
-- MHDD (Low-level HDD Diagnostic Tool)
+### Diagnostic and detection
+- [HDT](http://hdt-project.org) (Hardware Detection Tool)
+- [MHDD](http://hddguru.com/software/2005.10.02-MHDD/) (Low-level HDD Diagnostic Tool)
+- [Memtest86+](http://www.memtest.org/)
 
 ### Other OS
-- FreeDOS
+- [FreeDOS](http://www.freedos.org/)
 
 ### Boot Loaders
-- Charmeleon (EFI)
-- Graphical Boot Manager
+- [Charmeleon](http://chameleon.osx86.hu/) (EFI)
+- [GAG](http://gag.sourceforge.net/) Graphical Boot Manager
 
 ### Other Tools
-- NTPasswd
-- DBAN (HDD Eraser)
+- [ntpasswd](http://pogostick.net/~pnh/ntpasswd/)
+- [DBAN](http://www.dban.org/) (HDD Eraser)
 
 ## License
 GPLv3

@@ -12,20 +12,29 @@ Boot from the local hard drive.
 If you are unsure, select this option.
 ENDTEXT
 
+# Debian
 INCLUDE conf/enabled/debian.conf
+
+# Ubuntu
 INCLUDE conf/enabled/ubuntu.conf
+
+# Recovery
+INCLUDE conf/enabled/recovery.conf
+
+# Other GNU/Linux Based OS
+INCLUDE conf/enabled/others-linux.conf
+
+# Diagnostic and detection
+INCLUDE conf/enabled/detect-diagnostic.conf
+
+# Other OS
 INCLUDE conf/enabled/others.conf
 
-INCLUDE conf/enabled/system-rescue-cd.conf
-INCLUDE conf/enabled/rescatux.conf
-INCLUDE conf/enabled/gparted.conf
+# Other tools
+INCLUDE conf/enabled/tools.conf
 
-INCLUDE conf/enabled/super-grub-disk.conf
-
-INCLUDE conf/enabled/system-rescue-cd-other.conf
-
-INCLUDE conf/enabled/charmeleon.conf
-INCLUDE conf/enabled/memtest.conf
+# Boot Loaders
+INCLUDE conf/enabled/boot-loaders.conf
 
 PROMPT 0
 TIMEOUT 300
