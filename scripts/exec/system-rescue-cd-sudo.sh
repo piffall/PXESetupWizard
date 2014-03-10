@@ -20,8 +20,6 @@ TRG_PATH=$TFTP_PATH/boot/$TRG_NME
 rsync -avP $TMP/$TRG_NME/ $TFTP_PATH/boot/$TRG_NME --delete-after
 umount $TMP/$TRG_NME
 
-. ./system-rescue-cd/extract-other.sh
-
 # Patching the init script
 TRG_PATH=$TMP/$TRG_NME/initram
 [ ! -d $TRG_PATH ] && mkdir $TRG_PATH -p

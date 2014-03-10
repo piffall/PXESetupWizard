@@ -12,7 +12,7 @@ export TRG_PKG=$TRG_NME".zip"
 # Download and deploy it
 . ./common/download.sh
 wget -O $TMP/$TRG_PKG $SRC_PKG --header="Referer: http://chameleon.osx86.hu/static/some-words-about-donation?ref=file_download/42/Chameleon-2.1-r2069.iso.zip"
-unzip $TMP/$TRG_PKG -d $TFTP_PATH/boot/$TRG_NME
+unzip -f $TMP/$TRG_PKG -d $TFTP_PATH/boot/$TRG_NME
 
 # Clean
 . ./common/clean.sh
