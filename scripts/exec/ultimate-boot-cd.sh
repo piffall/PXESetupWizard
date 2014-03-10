@@ -15,6 +15,7 @@ echo "Mounting "$TMP/$TRG_NME
 [ ! -d $TMP/$TRG_NME ] && mkdir $TMP/$TRG_NME -p
 #mount -t iso9660 -o loop $TMP/$TRG_PKG $TMP/$TRG_NME
 7z x $TMP/$TRG_PKG -o$TMP/$TRG_NME
+find $TMP/$TRG_NME -type d | xargs chmod 755
 
 TRG_PATH=$TFTP_PATH/boot/$TRG_NME
 [ ! -d $TRG_PATH ] && mkdir $TRG_PATH -p
