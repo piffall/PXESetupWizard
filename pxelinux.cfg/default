@@ -31,7 +31,7 @@ INCLUDE conf/enabled/detect-diagnostic.conf
 INCLUDE conf/enabled/others.conf
 
 # Other tools
-INCLUDE conf/enabled/tools.conf
+INCLUDE conf/enabled/more-tools.conf
 
 # Boot Loaders
 INCLUDE conf/enabled/boot-loaders.conf
