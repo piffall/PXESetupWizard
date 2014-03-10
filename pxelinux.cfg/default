@@ -36,6 +36,9 @@ INCLUDE conf/enabled/more-tools.conf
 # Boot Loaders
 INCLUDE conf/enabled/boot-loaders.conf
 
+# More custom boots
+INCLUDE conf/more.conf
+
 # Controls
 INCLUDE conf/enabled/controls.conf
 
