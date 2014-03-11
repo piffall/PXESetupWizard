@@ -20,6 +20,7 @@ find $TMP/$TRG_NME -type d | xargs chmod 755
 TRG_PATH=$TFTP_PATH/boot/$TRG_NME
 [ ! -d $TRG_PATH ] && mkdir $TRG_PATH -p
 rsync -avP $TMP/$TRG_NME/ $TFTP_PATH/boot/$TRG_NME --delete-after
+find $TFTP_PATH/boot/$TRG_NME -type d | xargs chmod 755
 #umount $TMP/$TRG_NME
 
 . ./common/clean.sh
