@@ -3,3 +3,4 @@
 /boot/*
 /conf/available/*
 /conf/enabled/*
+/conf/more.conf
