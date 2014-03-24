@@ -26,10 +26,12 @@ ln -s /path/to/pxe/ /srv/tftp
 
 ### [Debian](http://www.debian.org)
 - Debian Stable (i386,amd64)
+- Debian Testing (i386,amd64)
 - Debian Unstable (i386,amd64)
 
 ### [Ubuntu](http://www.ubuntu.com)
-- Ubuntu Saucy (i386,amd64)
+- Ubuntu 13.10 Saucy (i386,amd64)
+- Ubuntu 14.04 Trusty (i386,amd64)
 
 ### Recovery
 - [System Rescue CD](http://www.sysresccd.org)
