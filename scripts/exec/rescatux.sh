@@ -25,9 +25,6 @@ echo "Mounting "$TMP/$TRG_NME/boot/boot-isos/rescatux_cdrom_usb_hybrid_i386_amd6
 TRG_PATH=$TFTP_PATH/boot/$TRG_NME
 [ ! -d $TRG_PATH ] && mkdir $TRG_PATH -p
 rsync -avP $TMP/$TRG_NME"_iso"/ $TRG_PATH --delete-after
-
-# Important umount order
-#umount $TMP/$TRG_NME"_iso"
-#umount $TMP/$TRG_NME
+find $TRG_PATH -type d | xargs chmod 755
 
 . ./common/clean.sh
