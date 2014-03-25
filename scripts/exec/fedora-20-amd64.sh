@@ -5,16 +5,23 @@ cd $(dirname "$0")
 source ../config.sh
 
 # Temp paths and files
-FEDORA_V="20"
-export SRC_PKG="http://mirrors.kernel.org/fedora/releases/20/Fedora/x86_64/iso/Fedora-${FEDORA_V}-x86_64-netinst.iso"
-export TRG_NME="fedora-${FEDORA_V}"
-export TRG_PKG=$TRG_NME".iso"
+REL="20"
+ARCH="x86_64"
+export SRC_PKG="http://mirrors.kernel.org/fedora/releases/${REL}/Fedora/${ARCH}/os/images/pxeboot/"
+export TRG_NME="fedora"
+export TRG_PKG=$TRG_NME
 
-# Download syslinux and deploy it
-. ./common/download.sh
-TRG_PATH=$TFTP_PATH/boot/$TRG_NME
+PRE_PATH=`pwd`
+
+[ ! -d $TMP/$TRG_PKG ] && mkdir $TMP/$TRG_PKG -p
+cd $TMP/$TRG_PKG
+#wget -r -nH --no-parent $SRC_PKG --reject="index.html*" --cut-dirs=8
+wget ${SRC_PKG}vmlinuz
+wget ${SRC_PKG}initrd.img
+wget ${SRC_PKG}upgrade.img
+cd $PRE_PATH
+
+TRG_PATH=$TFTP_PATH/boot/$TRG_NME-$REL/fedora-installer/$ARCH
 [ ! -d $TRG_PATH ] && mkdir $TRG_PATH -p
-cp -r $TMP/$TRG_PKG $TFTP_PATH/boot/$TRG_NME
-
-# Clean
+rsync -avP $TMP/$TRG_PKG/ $TRG_PATH --delete-after
 . ./common/clean.sh
