@@ -21,6 +21,9 @@ INCLUDE conf/enabled/ubuntu.conf
 # OpenSUSE
 INCLUDE conf/enabled/opensuse.conf
 
+# Fedora
+INCLUDE conf/enabled/fedora.conf
+
 # Recovery
 INCLUDE conf/enabled/recovery.conf
 
