@@ -18,6 +18,9 @@ INCLUDE conf/enabled/debian.conf
 # Ubuntu
 INCLUDE conf/enabled/ubuntu.conf
 
+# OpenSUSE
+INCLUDE conf/enabled/opensuse.conf
+
 # Recovery
 INCLUDE conf/enabled/recovery.conf
 
