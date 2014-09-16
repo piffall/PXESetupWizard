@@ -25,6 +25,7 @@ done
 DOWNLOAD="N"
 echo "Do you want to run scripts? [N/y]"
 read DOWNLOAD
+DOWNLOAD=$(echo $DOWNLOAD | tr '[:upper:]' '[:lower:]')
 
 cd $TFTP_PATH
 if [ "$DOWNLOAD" = "y" ]; then
