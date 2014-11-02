@@ -32,6 +32,7 @@ ln -s /path/to/pxe/ /srv/tftp
 ### [Ubuntu](http://www.ubuntu.com)
 - Ubuntu 13.10 Saucy (i386,amd64)
 - Ubuntu 14.04 Trusty (i386,amd64)
+- Ubuntu 14.10 Utopic (i386,amd64)
 
 ### Recovery
 - [System Rescue CD](http://www.sysresccd.org)

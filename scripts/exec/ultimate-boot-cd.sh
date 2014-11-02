@@ -6,6 +6,7 @@ cd $(dirname "$0")
 
 # Temp paths and files
 export SRC_PKG="ftp://mirror.komsys.org/pub/ubcd/ubcd529.iso"
+export SRC_PKG="http://ftp.cc.uoc.gr/mirrors/linux/ubcd/ubcd532.iso"
 export TRG_NME="ultimate-boot-cd"
 export TRG_PKG=$TRG_NME".iso"
 
