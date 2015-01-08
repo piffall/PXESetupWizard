@@ -19,6 +19,9 @@ INCLUDE conf/enabled/coreos.conf
 # Ubuntu
 INCLUDE conf/enabled/ubuntu.conf
 
+# CentOS
+INCLUDE conf/enabled/centos.conf
+
 # OpenSUSE
 INCLUDE conf/enabled/opensuse.conf
 
