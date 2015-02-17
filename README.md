@@ -27,6 +27,7 @@ ln -s /path/to/pxe/ /srv/tftp
 ### Popular GNU/Linux Distributions
 - [Debian](http://www.debian.org)
 - [Ubuntu](http://www.ubuntu.com)
+- [CentOS](https://www.centos.org)
 - [OpenSuse](https://www.opensuse.org)
 - [Fedora](https://getfedora.org/)
 
