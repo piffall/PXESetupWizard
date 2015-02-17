@@ -15,9 +15,6 @@ ENDTEXT
 # Debian
 INCLUDE conf/enabled/debian.conf
 
-# CoreOS
-INCLUDE conf/enabled/coreos.conf
-
 # Ubuntu
 INCLUDE conf/enabled/ubuntu.conf
 

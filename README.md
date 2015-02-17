@@ -1,4 +1,4 @@
-# PXE SW
+#PXE SW
 *NetBoot installers and Live OSs over TFTP*
 
 ## Requirements
@@ -24,24 +24,22 @@ ln -s /path/to/pxe/ /srv/tftp
 
 ## OS and Tools
 
-### [Debian](http://www.debian.org)
-- Debian Stable (i386,amd64)
-- Debian Testing (i386,amd64)
-- Debian Unstable (i386,amd64)
+### Popular GNU/Linux Distributions
+- [Debian](http://www.debian.org)
+- [Ubuntu](http://www.ubuntu.com)
+- [OpenSuse](https://www.opensuse.org)
+- [Fedora](https://getfedora.org/)
 
-### [Ubuntu](http://www.ubuntu.com)
-- Ubuntu 13.10 Saucy (i386,amd64)
-- Ubuntu 14.04 Trusty (i386,amd64)
-- Ubuntu 14.10 Utopic (i386,amd64)
+### More GNU/Linux Distributions
+- [GParted](https://gparted.org/)
+- [Kali Linux](https://www.kali.org/)
+- [CoreOS](https://coreos.com)
+- [OpenWRT](https://openwrt.org/)
 
 ### Recovery
 - [System Rescue CD](http://www.sysresccd.org)
 - [Rescatux](http://www.supergrubdisk.org/rescatux/)
 - [Super Grub Disk](http://www.supergrubdisk.org/super-grub2-disk/)
-
-### Other GNU/Linux Based OS
-- [OpenWRT](https://openwrt.org/)
-- [GParted](https://gparted.org/)
 
 ### Diagnostic and detection
 - [HDT](http://hdt-project.org) (Hardware Detection Tool)
@@ -60,4 +58,8 @@ ln -s /path/to/pxe/ /srv/tftp
 - [DBAN](http://www.dban.org/) (HDD Eraser)
 
 ## License
-GPLv3
+All files are under GNU General Public License v3
+
+### Donations
+*Please consider support the project donating to the address below:*
+1DgbSugso7kLuhU32gTVLnS7ZyRhjS6bKc

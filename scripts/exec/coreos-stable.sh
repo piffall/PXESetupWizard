@@ -11,8 +11,8 @@ export SRC_PKG2="http://${VERSION}.release.core-os.net/amd64-usr/current/coreos_
 export TRG_NME="coreos-stable"
 
 # FIXME
-export TRG_PKG="coreos_production_pxe.vmlinuz"
-export TRG_PKG2="coreos_production_pxe_image.cpio.gz"
+export TRG_PKG="vmlinuz"
+export TRG_PKG2="cpio.gz"
 
 # Download syslinux and deploy it
 . ./common/download.sh
