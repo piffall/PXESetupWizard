@@ -61,6 +61,6 @@ ln -s /path/to/pxe/ /srv/tftp
 ## License
 All files are under GNU General Public License v3
 
-### Donations
-*Please consider support the project donating to the address below:*
+### Donations (BTC)
+*Please consider support the project donating to the Bitcoin address below:*
 1DgbSugso7kLuhU32gTVLnS7ZyRhjS6bKc
