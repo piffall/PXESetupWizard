@@ -4,6 +4,6 @@
 cd $(dirname "$0")
 . ../config.sh
 
-export REL="utopic"
+export REL="vivid"
 export ARCH="amd64"
 . ./ubuntu/ubuntu-common.sh

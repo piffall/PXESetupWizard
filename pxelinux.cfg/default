@@ -13,14 +13,20 @@ ENDTEXT
 # Debian
 INCLUDE conf/enabled/debian.conf
 
-# CoreOS
-INCLUDE conf/enabled/coreos.conf
-
 # Ubuntu
 INCLUDE conf/enabled/ubuntu.conf
 
 # CentOS
 INCLUDE conf/enabled/centos.conf
+
+# Proxmox VE
+INCLUDE conf/enabled/proxmox.conf
+
+# VMware ESXi 6.0.x
+INCLUDE conf/enabled/vmware.conf
+
+# CoreOS
+INCLUDE conf/enabled/coreos.conf
 
 # OpenSUSE
 INCLUDE conf/enabled/opensuse.conf
