@@ -1,5 +1,5 @@
 DEFAULT syslinux/vesamenu.c32
-MENU TITLE PXE SW (GPLv3)
+MENU TITLE PXE SW Boot Menu
 MENU COLOR TITLE 1;36;44 #FFFFFFFF #00000000 STD
 MENU COLOR BORDER 30;44 #40000000 #00000000 STD
 
@@ -20,15 +20,6 @@ INCLUDE conf/enabled/ubuntu.conf
 
 # CentOS
 INCLUDE conf/enabled/centos.conf
-
-# Proxmox VE
-INCLUDE conf/enabled/proxmox.conf
-
-# VMware ESXi 6.0.x
-INCLUDE conf/enabled/vmware.conf
-
-# CoreOS
-INCLUDE conf/enabled/coreos.conf
 
 # OpenSUSE
 INCLUDE conf/enabled/opensuse.conf
