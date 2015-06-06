@@ -5,8 +5,8 @@ cd $(dirname "$0")
 source ../config.sh
 
 # Temp paths and files
-OPENWRT_V="12.09"
-export SRC_PKG="http://downloads.openwrt.org/attitude_adjustment/${OPENWRT_V}/x86/generic/openwrt-x86-generic-combined-squashfs.img"
+OPENWRT_V="14.07"
+export SRC_PKG="http://downloads.openwrt.org/barrier_breaker/${OPENWRT_V}/x86/generic/openwrt-x86-generic-combined-squashfs.img"
 export TRG_NME="openwrt"
 export TRG_PKG=$TRG_NME".img"
 

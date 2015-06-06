@@ -27,6 +27,9 @@ INCLUDE conf/enabled/opensuse.conf
 # Fedora
 INCLUDE conf/enabled/fedora.conf
 
+# Archlinux
+INCLUDE conf/enabled/archlinux.conf
+
 # Recovery
 INCLUDE conf/enabled/recovery.conf
 
