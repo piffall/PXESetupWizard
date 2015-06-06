@@ -5,7 +5,7 @@ cd $(dirname "$0")
 . ../config.sh
 
 # Temp paths and files
-export SRC_PKG="http://downloads.sourceforge.net/project/reactos/ReactOS/0.3.16/ReactOS-0.3.16-REL-live.zip"
+export SRC_PKG="http://downloads.sourceforge.net/project/reactos/ReactOS/0.3.17/ReactOS-0.3.17-REL-live.zip"
 export TRG_NME="reactos"
 export TRG_PKG=$TRG_NME".zip"
 
