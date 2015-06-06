@@ -4,6 +4,6 @@
 cd $(dirname "$0")
 . ../config.sh
 
-export REL="utopic"
-export ARCH="i386"
-. ./ubuntu/ubuntu-common.sh
+export REL="oldstable"
+export ARCH="amd64"
+. ./debian/debian-common.sh

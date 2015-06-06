@@ -1,5 +1,5 @@
 DEFAULT syslinux/vesamenu.c32
-MENU TITLE PXE SW (GPLv3)
+MENU TITLE PXE SW Boot Menu
 MENU COLOR TITLE 1;36;44 #FFFFFFFF #00000000 STD
 MENU COLOR BORDER 30;44 #40000000 #00000000 STD
 
@@ -26,6 +26,9 @@ INCLUDE conf/enabled/opensuse.conf
 
 # Fedora
 INCLUDE conf/enabled/fedora.conf
+
+# Archlinux
+INCLUDE conf/enabled/archlinux.conf
 
 # Recovery
 INCLUDE conf/enabled/recovery.conf
