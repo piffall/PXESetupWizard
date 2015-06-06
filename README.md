@@ -36,6 +36,7 @@ ln -s /path/to/pxe/ /srv/tftp
 - [Kali Linux](https://www.kali.org/)
 - [CoreOS](https://coreos.com)
 - [OpenWRT](https://openwrt.org/)
+- [ProxmoxVE](https://proxmox.com/) (It neets to be downloaded manually) [See](https://github.com/morph027/pve-iso-2-pxe)
 
 ### Recovery
 - [System Rescue CD](http://www.sysresccd.org)
@@ -49,6 +50,7 @@ ln -s /path/to/pxe/ /srv/tftp
 
 ### Other OS
 - [FreeDOS](http://www.freedos.org/)
+- [VMWare ESXi](https://my.vmware.com/web/vmware/evalcenter?p=free-esxi6) (It needs to be downloaded manually)
 
 ### Boot Loaders
 - [Charmeleon](http://chameleon.osx86.hu/) (EFI)
