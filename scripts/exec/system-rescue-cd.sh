@@ -11,13 +11,16 @@ export TRG_PKG=$TRG_NME".iso"
 
 # Download and deploy it
 . ./common/download.sh
-echo "Mounting "$TMP/$TRG_NME
+echo "Mounting " $TMP/$TRG_PKG " to " $TMP/$TRG_NME
 [ ! -d $TMP/$TRG_NME ] && mkdir $TMP/$TRG_NME -p
-7z x $TMP/$TRG_PKG -o$TMP/$TRG_NME
+7z -y x $TMP/$TRG_PKG -o$TMP/$TRG_NME
 
 TRG_PATH=$TFTP_PATH/boot/$TRG_NME
 [ ! -d $TRG_PATH ] && mkdir $TRG_PATH -p
-rsync -avP $TMP/$TRG_NME/ $TFTP_PATH/boot/$TRG_NME --delete-after
+rsync -avP $TMP/$TRG_NME/ $TRG_PATH --delete-after
+
+# Make some changes
+cd $TFTP_PATH
 find boot/system-rescue-cd/ -type d -exec chmod 775 {} \;
 find boot/system-rescue-cd/ -type f -exec chmod 664 {} \;
 find boot/system-rescue-cd/ -type f -executable -exec chmod +rx {} \;

@@ -40,3 +40,5 @@ if [ "$DOWNLOAD" = "y" ]; then
 		sudo $SCRIPT
 	done
 fi
+
+. ./fix_vesamenu.sh
