@@ -5,7 +5,7 @@ cd $(dirname "$0")
 . ../config.sh
 
 # Temp paths and files
-export SRC_PKG="http://downloads.sourceforge.net/project/systemrescuecd/sysresccd-x86/4.5.1/systemrescuecd-x86-4.5.1.iso"
+export SRC_PKG="http://downloads.sourceforge.net/project/systemrescuecd/sysresccd-x86/4.7.0/systemrescuecd-x86-4.7.0.iso"
 export TRG_NME="system-rescue-cd"
 export TRG_PKG=$TRG_NME".iso"
 
@@ -21,6 +21,7 @@ rsync -avP $TMP/$TRG_NME/ $TFTP_PATH/boot/$TRG_NME --delete-after
 find boot/system-rescue-cd/ -type d -exec chmod 775 {} \;
 find boot/system-rescue-cd/ -type f -exec chmod 664 {} \;
 find boot/system-rescue-cd/ -type f -executable -exec chmod +rx {} \;
+chmod 777 boot/system-rescue-cd/isolinux
 
 # Patching the init script
 TRG_PATH=$TMP/$TRG_NME/initram
