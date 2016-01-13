@@ -5,7 +5,7 @@ cd $(dirname "$0")
 source ../config.sh
 
 # Temp paths and files
-REL="2015.06.01"
+REL="2016.01.01"
 ARCH="x86_64"
 export SRC_PKG="http://mirror.rackspace.com/archlinux/iso/${REL}/arch/boot/${ARCH}/"
 export TRG_NME="archlinux"
