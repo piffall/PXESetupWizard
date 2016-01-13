@@ -5,7 +5,7 @@ cd $(dirname "$0")
 source ../config.sh
 
 # Temp paths and files
-export SRC_PKG="http://forja.cenatic.es/frs/download.php/file/1757/super_grub2_disk_hybrid_2.00s2.iso"
+export SRC_PKG="http://forja.cenatic.es/frs/download.php/file/1844/super_grub2_disk_hybrid_2.02s3.iso"
 export TRG_NME="sgd"
 export TRG_PKG=$TRG_NME".iso"
 
