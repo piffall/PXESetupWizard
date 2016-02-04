@@ -1,9 +1,11 @@
 #PXE SW
-*NetBoot installers and Live OSs over TFTP*
+*NetBoot installers and Live OSs over TFTP*. This project is a wizard,
+collection of install scripts, patches, ... to setup a PXE server with 
+most popular GNU/Linux distros. 
 
 ## Requirements
 - Debian based OS (Debian,Ubuntu,Mint,...)
-- 1,5 GB (Full setup)
+- 2,6 GB (Full setup)
 - Some packages: wget, sudo, unzip, tar
 - Configured TFTP Server (/srv/tftp/)
 - Configured DHCP Server
