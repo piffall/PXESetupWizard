@@ -24,6 +24,52 @@ git clone https://github.com/piffall/pxe-sw /path/to/pxe-sw
 ln -s /path/to/pxe/ /srv/tftp
 ```
 
+## Configure and install TFTP server
+
+- Install tftpd-hpa
+```bash
+sudo apt-get install tftpd-hpa
+```
+
+- Edit the configuration file "/etc/default/tftpd-hpa"
+```bash
+# /etc/default/tftpd-hpa
+
+TFTP_USERNAME="tftp"
+TFTP_DIRECTORY="/srv/tftp"
+TFTP_ADDRESS="0.0.0.0:69"
+TFTP_OPTIONS="--verbose"
+#TFTP_OPTIONS="--secure"
+```
+*Note that "--secure" option line is commented*
+
+## Configure with OpenWRT dhcp server
+
+- Edit the DHCP configuration file "/etc/config/dhcp" to add a dhcp\_boot option
+```
+config dnsmasq
+        option domainneeded '1'
+        option boguspriv '1'
+        option localise_queries '1'
+	...
+        option dhcp_boot '/srv/tftp/pxelinux.0,pxe-hostname,192.168.1.254' # Change host and IP address.
+```
+- Restart your device
+
+## Configure with DHCP3 Server
+
+- Add an option to the network configuration
+```
+subnet 192.168.1.0 netmask 255.255.255.0 {
+	range 192.168.1.200 192.168.5.253;
+	option domain-name "lan";
+	default-lease-time 1800;
+	max-lease-time 7200;
+	next-server "192.168.1.254";                     # The TFTP IP address
+	option bootfile-name "/srv/tftp/pxelinux.0";     # The PXE file
+}
+```
+
 ## OS and Tools
 
 ### Popular GNU/Linux Distributions
