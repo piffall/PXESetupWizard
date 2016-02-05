@@ -61,7 +61,7 @@ config dnsmasq
 - Add an option to the network configuration
 ```
 subnet 192.168.1.0 netmask 255.255.255.0 {
-	range 192.168.1.200 192.168.5.253;
+	range 192.168.1.200 192.168.1.253;
 	option domain-name "lan";
 	default-lease-time 1800;
 	max-lease-time 7200;
