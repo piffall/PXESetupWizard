@@ -113,4 +113,4 @@ All files are under GNU General Public License v3
 
 ### Donations (BTC)
 *Please consider support the project donating to the Bitcoin address below:*
-1DgbSugso7kLuhU32gTVLnS7ZyRhjS6bKc
+1LL21uMJGKq6AFz1Q7evQkz52Tu8mKzyCe
