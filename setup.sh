@@ -10,6 +10,9 @@ cd $(dirname "$0")
 export TFTP_PATH=$(pwd)
 export SCRIPT_PATH=$TFTP_PATH/scripts/exec
 
+# Assume yes to all questions
+ASSUME_YES=${1:-false}
+
 # Parse IPs, set default and calc length
 IPS=($(ip addr | grep 'inet ' | cut -d' ' -f6 | cut -d '/' -f1))
 DEF_IP_INDEX=1
@@ -31,9 +34,11 @@ do
 done
 
 # Ask user to choose one of the IP addresses
-echo ""
-echo -n "Press enter to keep the current choice[*], or type selection number: "
-read IP_INDEX
+if [ "$ASSUME_YES" == false ]; then
+    echo ""
+    echo -n "Press enter to keep the current choice[*], or type selection number: "
+    read IP_INDEX
+fi
 
 if [ "x$IP_INDEX" == "x" ]; then
     IP=${IPS[$DEF_IP_INDEX]}
@@ -54,10 +59,12 @@ done
 
 # Ask to run scripts
 DOWNLOAD="y"
-echo -n "Do you want to run scripts? [Y/n]: "
-read DOWNLOAD
-DOWNLOAD=$(echo $DOWNLOAD | tr '[:upper:]' '[:lower:]')
-echo ""
+if [ "$ASSUME_YES" == false ]; then
+    echo -n "Do you want to run scripts? [Y/n]: "
+    read DOWNLOAD
+    DOWNLOAD=$(echo $DOWNLOAD | tr '[:upper:]' '[:lower:]')
+    echo ""
+fi
 
 # Enter path and run each installation script
 cd $TFTP_PATH
