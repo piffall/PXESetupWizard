@@ -1,30 +1,76 @@
-#PXE SW
+# PXE SW
+
 *NetBoot installers and Live OSs over TFTP*. This project is a wizard,
-collection of install scripts, patches, ... to setup a PXE server with 
-most popular GNU/Linux distros. 
+collection of install scripts, patches, ... to setup a PXE server with
+most popular GNU/Linux distros.
 
-## Requirements
+## Dockerized
+
+- Clone this repository.
+```
+git clone https://github.com/piffall/pxe-sw
+```
+
+- Build image
+```
+make
+```
+
+- Create the container
+```
+./docker-create.sh
+
+```
+
+- Start TFTP server simply running the container
+```
+./docker-start.sh
+```
+
+- Run setup.
+```
+./docker-setup.sh
+```
+
+After this point, the container is ready. You only need to start/stop when you
+need.
+
+```
+docker start pxe-sw
+docker stop pxe-sw
+```
+*See docker-\*.sh scripts.*
+
+## Hosted
+
+### Requirements
+
 - Debian based OS (Debian,Ubuntu,Mint,...)
-- 2,6 GB (Full setup)
-- Some packages: wget, sudo, unzip, tar
-- Configured TFTP Server (/srv/tftp/)
-- Configured DHCP Server
+- Some packages: wget, sudo, unzip, tar, ...
 
-## Installation
+### Install
+
+- Install dependencies
+```
+apt-get -y install git tftpd-hpa unzip wget curl p7zip-full xzip
+```
+
 - Clone this repository, I recomend you clone into your home path.
 ```
 git clone https://github.com/piffall/pxe-sw /path/to/pxe-sw
 ```
+
 - Run script and answer the questions
 ```
 ./setup.sh
 ```
+
 - Create a symlink
 ```
 ln -s /path/to/pxe/ /srv/tftp
 ```
 
-## Configure and install TFTP server
+### Configure and install TFTP server
 
 - Install tftpd-hpa
 ```bash
@@ -41,7 +87,10 @@ TFTP_ADDRESS="0.0.0.0:69"
 TFTP_OPTIONS="--verbose"
 #TFTP_OPTIONS="--secure"
 ```
+
 *Note that "--secure" option line is commented*
+
+# Configure DHCP Server
 
 ## Configure with OpenWRT dhcp server
 

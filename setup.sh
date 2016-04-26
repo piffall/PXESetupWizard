@@ -6,7 +6,7 @@ echo "|          PXE SETUP WIZARD          |"
 echo "+------------------------------------+"
 echo ""
 
-cd $(dirname "$0") 
+cd $(dirname "$0")
 export TFTP_PATH=$(pwd)
 export SCRIPT_PATH=$TFTP_PATH/scripts/exec
 
@@ -18,7 +18,7 @@ IPS=($(ip addr | grep 'inet ' | cut -d' ' -f6 | cut -d '/' -f1))
 DEF_IP_INDEX=1
 IPS_LEN=${#IPS[*]}
 
-# Header of IP choice 
+# Header of IP choice
 echo "Select an IP address to bind TFTP service"
 echo "-----------------------------------------"
 echo ""
@@ -51,6 +51,7 @@ cd conf
 BLD_PATH=$(pwd)
 for FILE in $(ls src/)
 do
+    echo "Building file $FILE..."
     cat $BLD_PATH/src/$FILE | sed -s 's/{ip}/'$IP'/g' > $BLD_PATH/available/$FILE
 done
 
