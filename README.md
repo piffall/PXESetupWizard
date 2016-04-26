@@ -7,38 +7,49 @@ most popular GNU/Linux distros.
 ## Dockerized
 
 - Clone this repository.
-```
+```bash
 git clone https://github.com/piffall/pxe-sw
 ```
 
 - Build image
-```
+```bash
 make
 ```
 
 - Create the container
-```
+```bash
 ./docker-create.sh
-
 ```
 
 - Start TFTP server simply running the container
-```
+```bash
 ./docker-start.sh
 ```
 
 - Run setup.
-```
+```bash
 ./docker-setup.sh
 ```
 
 After this point, the container is ready. You only need to start/stop when you
 need.
 
-```
+```bash
 docker start pxe-sw
 docker stop pxe-sw
 ```
+
+### Systemd (to start up on boot)
+
+#### Enable as service
+```bash
+sudo cp ~/pxe-sw/pxe-sw.service /lib/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl start pxe-sw.service
+sudo systemctl enable pxe-sw.service
+```
+
+
 *See docker-\*.sh scripts.*
 
 ## Hosted

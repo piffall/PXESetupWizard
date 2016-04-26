@@ -1,0 +1,13 @@
+[Unit]
+Description=PXE SW container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=idle
+Restart=always
+ExecStart=/usr/bin/docker start -a pxe-sw
+ExecStop=/usr/bin/docker stop -t 2 pxe-sw
+
+[Install]
+WantedBy=multi-user.target
