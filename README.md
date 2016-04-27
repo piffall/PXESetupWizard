@@ -11,24 +11,9 @@ most popular GNU/Linux distros.
 git clone https://github.com/piffall/pxe-sw
 ```
 
-- Build image
+- Build image and setup, this could take several time
 ```bash
-make
-```
-
-- Create the container
-```bash
-./docker-create.sh
-```
-
-- Start TFTP server simply running the container
-```bash
-./docker-start.sh
-```
-
-- Run setup.
-```bash
-./docker-setup.sh
+make all
 ```
 
 After this point, the container is ready. You only need to start/stop when you
@@ -43,14 +28,8 @@ docker stop pxe-sw
 
 #### Enable as service
 ```bash
-sudo cp ~/pxe-sw/pxe-sw.service /lib/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl start pxe-sw.service
-sudo systemctl enable pxe-sw.service
+make install # Systemd only
 ```
-
-
-*See docker-\*.sh scripts.*
 
 ## Hosted
 

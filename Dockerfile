@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 MAINTAINER Cristòfol Torrens "piffall@gmail.com"
 
 RUN apt-get update
