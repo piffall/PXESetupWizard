@@ -42,7 +42,7 @@ make install # Systemd only
 
 - Install dependencies
 ```
-apt-get -y install git tftpd-hpa unzip wget curl p7zip-full xzip
+apt-get -y install git tftpd-hpa unzip wget curl p7zip-full xzip xz-utils cpio
 ```
 
 - Clone this repository, I recomend you clone into your home path.
