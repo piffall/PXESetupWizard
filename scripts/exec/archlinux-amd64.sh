@@ -5,22 +5,16 @@ cd $(dirname "$0")
 source ../config.sh
 
 # Temp paths and files
-REL="latest"
-ARCH="x86_64"
-export SRC_PKG="http://mirror.rackspace.com/archlinux/iso/${REL}/arch/boot/${ARCH}/"
+export SRC_PKG="https://releng.archlinux.org/pxeboot/ipxe.lkrn"
 export TRG_NME="archlinux"
-export TRG_PKG=$TRG_NME
+export TRG_PKG="$TRG_NME.krnl"
 
-PRE_PATH=`pwd`
+# Download
+. ./common/download.sh
 
-[ ! -d $TMP/$TRG_PKG ] && mkdir $TMP/$TRG_PKG -p
-cd $TMP/$TRG_PKG
-#wget -r -nH --no-parent $SRC_PKG --reject="index.html*" --cut-dirs=8
-wget ${SRC_PKG}vmlinuz
-wget ${SRC_PKG}archiso.img
-cd $PRE_PATH
+# Make directory and copy downloaded kernel
+mkdir -p $TFTP_PATH/boot/$TRG_NME
+cp $TMP/$TRG_PKG $TFTP_PATH/boot/$TRG_NME/$TRG_PKG
 
-TRG_PATH=$TFTP_PATH/boot/$TRG_NME/archlinux-installer/$ARCH
-[ ! -d $TRG_PATH ] && mkdir $TRG_PATH -p
-rsync -avP $TMP/$TRG_PKG/ $TRG_PATH --delete-after
+# Clean
 . ./common/clean.sh
