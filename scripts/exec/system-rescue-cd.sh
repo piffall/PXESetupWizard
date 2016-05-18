@@ -5,7 +5,7 @@ cd $(dirname "$0")
 . ../config.sh
 
 # Temp paths and files
-export SRC_PKG="http://downloads.sourceforge.net/project/systemrescuecd/sysresccd-x86/4.7.0/systemrescuecd-x86-4.7.0.iso"
+export SRC_PKG="http://downloads.sourceforge.net/project/systemrescuecd/sysresccd-x86/4.7.2/systemrescuecd-x86-4.7.2.iso"
 export TRG_NME="system-rescue-cd"
 export TRG_PKG=$TRG_NME".iso"
 
