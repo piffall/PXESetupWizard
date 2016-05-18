@@ -7,7 +7,7 @@ source ../config.sh
 # Temp paths and files
 export SRC_PKG="https://releng.archlinux.org/pxeboot/ipxe.lkrn"
 export TRG_NME="archlinux"
-export TRG_PKG="$TRG_NME.krnl"
+export TRG_PKG="$TRG_NME.lkrn"
 
 # Download
 . ./common/download.sh
