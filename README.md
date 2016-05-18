@@ -117,6 +117,7 @@ subnet 192.168.1.0 netmask 255.255.255.0 {
 - [CentOS](https://www.centos.org)
 - [OpenSuse](https://www.opensuse.org)
 - [Fedora](https://getfedora.org/)
+- [Archlinux](https://www.archlinux.org/)
 
 ### More GNU/Linux Distributions
 - [GParted](https://gparted.org/)
