@@ -1,5 +1,7 @@
 # PXE SW
 
+[![Join the chat at https://gitter.im/piffall/pxe-sw](https://badges.gitter.im/piffall/pxe-sw.svg)](https://gitter.im/piffall/pxe-sw?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 *NetBoot installers and Live OSs over TFTP*. This project is a wizard,
 collection of install scripts, patches, ... to setup a PXE server with
 most popular GNU/Linux distros.
