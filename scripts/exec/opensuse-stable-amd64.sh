@@ -5,7 +5,7 @@ cd $(dirname "$0")
 source ../config.sh
 
 # Temp paths and files
-SUSE_V="13.2"
+SUSE_V="Leap-42.1"
 export SRC_PKG="http://ftp.uni-kl.de/pub/linux/opensuse/distribution/openSUSE-stable/iso/openSUSE-${SUSE_V}-NET-x86_64.iso"
 export TRG_NME="opensuse-stable"
 export TRG_PKG=$TRG_NME".iso"
