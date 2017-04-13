@@ -53,6 +53,7 @@ git clone https://github.com/piffall/pxe-sw /path/to/pxe-sw
 ```
 
 - Setup (required step)
+
 This will ask for IP address to listen to, and if you want to setup all OS.
 If you are only interested in one of them, answer "n" to this question.
 ```
@@ -60,6 +61,7 @@ If you are only interested in one of them, answer "n" to this question.
 ```
 
 - Specific OS setup
+
 If you only want to setup one OS, for example, Debian, find corresponding
 setup script and run it, after that, you shuold run fix-vesamenu.sh.
 ```
@@ -68,6 +70,7 @@ setup script and run it, after that, you shuold run fix-vesamenu.sh.
 ```
 
 - Create a symlink
+
 If you /srv/tftp already exists, this will cause an error, please backup and
 remove /srv/tftp before symlink.
 ```
