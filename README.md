@@ -44,7 +44,7 @@ make install # Systemd only
 
 - Install dependencies
 ```
-apt-get -y install git tftpd-hpa unzip wget curl p7zip-full xzip xz-utils cpio
+sudo apt-get -y install git tftpd-hpa unzip wget curl p7zip-full xzip xz-utils cpio
 ```
 
 - Clone this repository, I recomend you clone into your home path.
@@ -52,14 +52,26 @@ apt-get -y install git tftpd-hpa unzip wget curl p7zip-full xzip xz-utils cpio
 git clone https://github.com/piffall/pxe-sw /path/to/pxe-sw
 ```
 
-- Run script and answer the questions
+- Setup (required step)
+This will ask for IP address to listen to, and if you want to setup all OS.
+If you are only interested in one of them, answer "n" to this question.
 ```
 ./setup.sh
 ```
 
-- Create a symlink
+- Specific OS setup
+If you only want to setup one OS, for example, Debian, find corresponding
+setup script and run it, after that, you shuold run fix-vesamenu.sh.
 ```
-ln -s /path/to/pxe/ /srv/tftp
+./scripts/exec/debian-stable-amd64.sh
+./fix_vesamenu.sh
+```
+
+- Create a symlink
+If you /srv/tftp already exists, this will cause an error, please backup and
+remove /srv/tftp before symlink.
+```
+sudo ln -s /path/to/pxe/ /srv/tftp
 ```
 
 ### Configure and install TFTP server
@@ -89,11 +101,11 @@ TFTP_OPTIONS="--verbose"
 - Edit the DHCP configuration file "/etc/config/dhcp" to add a dhcp\_boot option
 ```
 config dnsmasq
-        option domainneeded '1'
-        option boguspriv '1'
-        option localise_queries '1'
-	...
-        option dhcp_boot '/srv/tftp/pxelinux.0,pxe-hostname,192.168.1.254' # Change host and IP address.
+  option domainneeded '1'
+  option boguspriv '1'
+  option localise_queries '1'
+  ...
+  option dhcp_boot '/srv/tftp/pxelinux.0,pxe-hostname,192.168.1.254' # Change host and IP address.
 ```
 - Restart your device
 

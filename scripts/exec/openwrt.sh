@@ -4,6 +4,9 @@
 cd $(dirname "$0")
 source ../config.sh
 
+# Disabled because of unavailability of download
+exit 0
+
 # Temp paths and files
 OPENWRT_VNAME="chaos_calmer"
 OPENWRT_VNUM="15.05.1"

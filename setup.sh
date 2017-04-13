@@ -61,7 +61,7 @@ done
 # Ask to run scripts
 DOWNLOAD="y"
 if [ "$ASSUME_YES" == false ]; then
-    echo -n "Do you want to run scripts? [Y/n]: "
+    echo -n "Do you want to run all setup scripts? (Download all required OS binaries to $TFTP_PATH/boot) [Y/n]: "
     read DOWNLOAD
     DOWNLOAD=$(echo $DOWNLOAD | tr '[:upper:]' '[:lower:]')
     echo ""
@@ -72,7 +72,7 @@ cd $TFTP_PATH
 if [ "$DOWNLOAD" = "y" ]; then
     for SCRIPT in $(find $SCRIPT_PATH -executable -type f | sort)
     do
-        echo -e "\x1b[30;01m""Running script "$SCRIPT"\x1b[39;49;00m"
+        echo -e "\x1b[30;01m""Running setup script "$SCRIPT"\x1b[39;49;00m"
         $SCRIPT
     done
 fi
