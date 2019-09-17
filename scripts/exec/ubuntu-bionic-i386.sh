@@ -4,6 +4,6 @@
 cd $(dirname "$0")
 . ../config.sh
 
-export REL="vivid"
-export ARCH="amd64"
+export REL="bionic"
+export ARCH="i386"
 . ./ubuntu/ubuntu-common.sh

@@ -4,6 +4,6 @@
 cd $(dirname "$0")
 . ../config.sh
 
-export REL="trusty"
-export ARCH="i386"
+export REL="disco"
+export ARCH="amd64"
 . ./ubuntu/ubuntu-common.sh

@@ -4,6 +4,6 @@
 cd $(dirname "$0")
 . ../config.sh
 
-export REL="vivid"
+export REL="disco"
 export ARCH="i386"
 . ./ubuntu/ubuntu-common.sh

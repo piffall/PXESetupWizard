@@ -5,7 +5,7 @@ cd $(dirname "$0")
 . ../config.sh
 
 # Temp paths and files
-export SRC_PKG="http://ftp.cc.uoc.gr/mirrors/linux/ubcd/ubcd535.iso"
+export SRC_PKG="http://ftp.cc.uoc.gr/mirrors/linux/ubcd/ubcd538.iso"
 export TRG_NME="ultimate-boot-cd"
 export TRG_PKG=$TRG_NME".iso"
 

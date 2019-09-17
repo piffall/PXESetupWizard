@@ -5,7 +5,7 @@ cd $(dirname "$0")
 source ../config.sh
 
 # Temp paths and files
-export SRC_PKG="https://www.archlinux.org/static/netboot/ipxe.b754d04e0868.lkrn"
+export SRC_PKG="https://www.archlinux.org/static/netboot/ipxe.08268867b45a.lkrn"
 export TRG_NME="archlinux"
 export TRG_PKG="$TRG_NME.lkrn"
 

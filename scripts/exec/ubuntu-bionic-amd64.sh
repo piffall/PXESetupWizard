@@ -4,6 +4,6 @@
 cd $(dirname "$0")
 . ../config.sh
 
-export REL="trusty"
+export REL="bionic"
 export ARCH="amd64"
 . ./ubuntu/ubuntu-common.sh

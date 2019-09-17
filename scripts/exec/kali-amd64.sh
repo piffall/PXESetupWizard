@@ -5,7 +5,7 @@ cd $(dirname "$0")
 . ../config.sh
 
 # Temp paths and files
-export SRC_PKG="http://repo.kali.org/kali/dists/kali-current/main/installer-amd64/current/images/netboot/netboot.tar.gz"
+export SRC_PKG="http://http.kali.org/kali/dists/kali-rolling/main/installer-amd64/current/images/netboot/netboot.tar.gz"
 export TRG_NME="kali"
 export TRG_PKG=$TRG_NME".tar.gz"
 

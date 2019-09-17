@@ -18,7 +18,6 @@ cd $TMP/$TRG_PKG
 #wget -r -nH --no-parent $SRC_PKG --reject="index.html*" --cut-dirs=8
 wget ${SRC_PKG}vmlinuz
 wget ${SRC_PKG}initrd.img
-wget ${SRC_PKG}upgrade.img
 cd $PRE_PATH
 
 TRG_PATH=$TFTP_PATH/boot/$TRG_NME-$REL/centos-installer/$ARCH

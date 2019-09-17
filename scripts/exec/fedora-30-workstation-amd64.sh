@@ -5,9 +5,9 @@ cd $(dirname "$0")
 source ../config.sh
 
 # Temp paths and files
-REL="24"
+REL="30"
 ARCH="x86_64"
-export SRC_PKG="http://mirrors.kernel.org/fedora/releases/${REL}/Server/${ARCH}/os/images/pxeboot/"
+export SRC_PKG="http://mirrors.kernel.org/fedora/releases/${REL}/Workstation/${ARCH}/os/images/pxeboot/"
 export TRG_NME="fedora"
 export TRG_PKG=$TRG_NME
 
