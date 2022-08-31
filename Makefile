@@ -1,7 +1,10 @@
-all: build create start setup stop
+all: build cleanup create start setup stop
 
 build:
 	@docker build --tag=piffall/pxe-sw .
+
+cleanup: # cleanup
+	@docker rm -f pxe-sw
 
 create: # build
 	@docker create --name="pxe-sw" --net="host" -p 69:69/udp -ti piffall/pxe-sw
