@@ -3,6 +3,9 @@ all: build create start setup stop
 build:
 	@docker build --tag=piffall/pxe-sw .
 
+clean: # clean
+	@docker rm -f pxe-sw
+
 create: # build
 	@docker create --name="pxe-sw" --net="host" -p 69:69/udp -ti piffall/pxe-sw
 
