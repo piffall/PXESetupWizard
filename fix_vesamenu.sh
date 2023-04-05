@@ -7,5 +7,5 @@
 for BADFILE in $(find boot/ -type f -iname "vesamenu.c32")
 do
     echo "Replacing $BADFILE"
-    cp -f syslinux/vesamenu.c32 $BADFILE
+    cp -f syslinux/modules/bios/vesamenu.c32 $BADFILE
 done
